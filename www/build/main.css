@@ -25678,8 +25678,51 @@ ion-navbar.toolbar {
   min-height: calc(46px + env(safe-area-inset-bottom));
 }
 
-page-login .background {
-  background-image: url("../assets/bg.jpg");
+page-login ion-content {
+  background-color: sandybrown;
+}
+
+page-login ion-slides {
+  height: 80%;
+}
+
+page-login .slide-zoom {
+  height: 80%;
+}
+
+page-login .slide-title {
+  margin-top: 2.8rem;
+}
+
+page-login .slide-image {
+  max-height: 50%;
+  max-width: 60%;
+  margin: 10px 0;
+}
+
+page-login b {
+  font-weight: 500;
+}
+
+page-login .sign-up-button {
+  margin: 25px;
+}
+
+page-login p {
+  padding: 0 10px;
+  font-size: 14px;
+  line-height: 1.5;
+  color: #60646B;
+}
+
+page-login p b {
+  color: #000000;
+}
+
+page-login img {
+  border-radius: 50%;
+  -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 page-login .scroll-content {
@@ -25700,60 +25743,4 @@ page-login .scroll-content {
   -ms-flex-pack: center;
   justify-content: center;
   text-align: center;
-}
-
-page-login ion-card.card {
-  -webkit-box-shadow: none;
-  box-shadow: none;
-  background: rgba(0, 0, 0, 0.5);
-  border-radius: 5px;
-}
-
-page-login a, page-login p,
-page-login ion-card-header.card-header {
-  font-stretch: semi-condensed;
-  color: #fff !important;
-}
-
-page-login .list > .item-block:first-child {
-  border: medium none;
-}
-
-page-login .item {
-  margin-bottom: 5px;
-  background: #2E2E2E;
-  border: 1px solid #747474;
-}
-
-page-login .item .text-input {
-  color: #fff;
-}
-
-page-login .item input::-moz-placeholder {
-  color: #fff !important;
-}
-
-page-login .item input:-moz-placeholder {
-  color: #fff !important;
-}
-
-page-login .item *::-webkit-input-placeholder {
-  color: #fff !important;
-}
-
-page-login .item *:-ms-input-placeholder {
-  color: #fff !important;
-}
-
-page-login .item *:-moz-placeholder {
-  color: #fff !important;
-}
-
-page-login .icon {
-  padding-right: 10px;
-}
-
-page-login .bottom {
-  position: absolute;
-  bottom: 0;
 }
