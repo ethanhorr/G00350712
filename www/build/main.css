@@ -25678,6 +25678,73 @@ ion-navbar.toolbar {
   min-height: calc(46px + env(safe-area-inset-bottom));
 }
 
+page-home ion-content {
+  background-color: sandybrown;
+}
+
+page-home ion-slides {
+  height: 80%;
+}
+
+page-home .slide-zoom {
+  height: 80%;
+}
+
+page-home .slide-title {
+  margin-top: 2.8rem;
+}
+
+page-home .slide-image {
+  max-height: 50%;
+  max-width: 60%;
+  margin: 10px 0;
+}
+
+page-home b {
+  font-weight: 500;
+}
+
+page-home .sign-up-button {
+  padding: 5px;
+}
+
+page-home p {
+  padding: 0 10px;
+  font-size: 14px;
+  line-height: 1.5;
+  color: #60646B;
+}
+
+page-home p b {
+  color: #000000;
+}
+
+page-home img {
+  border-radius: 50%;
+  -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+page-home .scroll-content {
+  -webkit-align-content: center;
+  -ms-flex-line-pack: center;
+  align-content: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  text-align: center;
+}
+
 page-login ion-content {
   background-color: sandybrown;
 }
