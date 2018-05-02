@@ -8,14 +8,17 @@ import { HttpModule } from '@angular/http';
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
 import { LoginPage } from '../pages/login/login';
-import { ProfilePage } from '../pages/profile/profile';
+import { AboutPage } from '../pages/about/about';
+import { ArticlePage } from '../pages/article/article';
+import { LolDataProvider } from '../providers/lol-data/lol-data';
 
 @NgModule({
   declarations: [
     MyApp,
     HomePage,
     LoginPage,
-    ProfilePage
+    AboutPage,
+    ArticlePage
   ],
   imports: [
     BrowserModule,
@@ -27,12 +30,14 @@ import { ProfilePage } from '../pages/profile/profile';
     MyApp,
     HomePage,
     LoginPage,
-    ProfilePage
+    AboutPage,
+    ArticlePage
   ],
   providers: [
     StatusBar,
     SplashScreen,
-    {provide: ErrorHandler, useClass: IonicErrorHandler}
+    {provide: ErrorHandler, useClass: IonicErrorHandler},
+    LolDataProvider
   ]
 })
 export class AppModule {}

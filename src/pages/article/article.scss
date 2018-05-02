@@ -1,0 +1,31 @@
+page-article {
+
+    .title {
+        text-align: center;
+        font-size: 20px;
+        color:rgb(0, 0, 0);
+    }
+
+    h5 {
+        text-align: center;
+        font-size: 45px;
+    }
+
+    ion-button {
+        font-size: 45px;
+    }
+
+    .articleItem {
+        margin-top: 10%;
+        margin-left: auto;
+        margin-right: auto;
+        display: block;
+    }
+    .articleItem button {
+        font-size: 20px;
+        margin-top: 5%;
+        margin-left: auto;
+        margin-right: auto;
+        display: block;
+    }
+}
