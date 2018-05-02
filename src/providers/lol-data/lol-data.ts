@@ -6,7 +6,8 @@ import { Observable } from 'rxjs/observable';
 @Injectable()
 export class LolDataProvider {
 
-  private url: string = "https://newsapi.org/v2/top-headlines?sources=the-lad-bible&apiKey=f5617d913f7e42928c9a7bc6eee15573";
+  private key: string = "f5617d913f7e42928c9a7bc6eee15573";
+  private url: string = "https://newsapi.org/v2/top-headlines?sources=the-lad-bible&apiKey=" + this.key;
 
   constructor(private http: Http) {
     console.log('Hello LolData Provider');

@@ -16,16 +16,25 @@ page-article {
     }
 
     .articleItem {
-        margin-top: 10%;
+        margin-top: 5%;
         margin-left: auto;
         margin-right: auto;
         display: block;
     }
     .articleItem button {
         font-size: 20px;
-        margin-top: 5%;
         margin-left: auto;
         margin-right: auto;
         display: block;
+    }
+
+    img {
+        margin-left: auto;
+        margin-right: auto;
+        display: block;
+    }
+
+    .authorP {
+        text-align: center;
     }
 }

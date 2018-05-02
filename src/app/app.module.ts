@@ -11,6 +11,7 @@ import { LoginPage } from '../pages/login/login';
 import { AboutPage } from '../pages/about/about';
 import { ArticlePage } from '../pages/article/article';
 import { LolDataProvider } from '../providers/lol-data/lol-data';
+import { Vibration } from '@ionic-native/vibration';
 
 @NgModule({
   declarations: [
@@ -37,6 +38,7 @@ import { LolDataProvider } from '../providers/lol-data/lol-data';
     StatusBar,
     SplashScreen,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
+    Vibration,
     LolDataProvider
   ]
 })

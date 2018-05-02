@@ -19,6 +19,14 @@
               </button>
             </ion-buttons>
 
+
+          <ion-buttons end>
+              <button ion-button icon-only (click)="openModal()">
+                <ion-icon name="help-circle"></ion-icon>
+              </button>
+            </ion-buttons>
+            
+
         </ion-navbar>
 
         
@@ -34,12 +42,12 @@
 
       <p class="title">{{articles.title}}</p><br>
 
+      <p class="authorP">Author: {{articles.author}}</p><br>
 
+      <img src="{{articles.urlToImage}}"><br>
       <a href="{{articles.url}}">
-        <img src="{{articles.urlToImage}}"><br>
+          <button ion-button large>Read article</button>
       </a>
-      <p>Author: {{articles.author}}</p><br>
-      <button ion-button large>Read article</button>
     </ion-item>
 
 </ion-content>
