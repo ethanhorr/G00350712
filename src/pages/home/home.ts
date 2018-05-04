@@ -12,21 +12,36 @@ import { Storage } from '@ionic/storage';
   selector: 'page-home',
   templateUrl: 'home.html'
 })
+
+/**
+ * Author: Ethan Horrigan
+ */
+
 export class HomePage {
 
   constructor(public navCtrl: NavController, public http: Http, public lolData: LolDataProvider, private vibration: Vibration, public storage: Storage) {
   }
 
+  default: string;
 
+  /**
+   * Navigate to Article Page & Vibrate when pressed
+   */
   openArticlePage() {
     this.vibration.vibrate(1000); //Vibrates when Random Button is pressed
     this.navCtrl.push(ArticlePage);
   }
 
+  /**
+   * Navigate to Home Page
+   */
   openHome() {
     this.navCtrl.push(HomePage);
   }
 
+  /**
+   * Navigate to Profile Page
+   */
   openProfile() {
     this.navCtrl.push(ProfilePage);
   }

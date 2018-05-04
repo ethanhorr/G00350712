@@ -8,8 +8,16 @@ import { Storage } from '@ionic/storage';
   selector: 'page-profile',
   templateUrl: 'profile.html',
 })
+
+/**
+ * Author: Ethan Horrigan
+ */
+
 export class ProfilePage {
 
+  /**
+   * String to hold News Source API URL
+   */
   public mySource: string;
 
   constructor(public navCtrl: NavController, public navParams: NavParams, public storage: Storage) {
@@ -20,24 +28,41 @@ export class ProfilePage {
     console.log(this.mySource);
   }
 
+  /**
+   * Navigate to Home Page
+   */
   openHome() {
     this.navCtrl.push(HomePage);
   }
 
+  /**
+   * Navigate to Profile Page
+   */
   openProfile() {
     this.navCtrl.push(ProfilePage);
   }
 
+  /**
+   * Saves News Source API Link to Storage
+   */
   save() {
     this.storage.set("mySource", this.mySource);
-      window.location.reload();
+    window.location.reload();
     console.log(this.mySource);
   }
 
+  /**
+   * Retrieve News Source API Link in Storage
+   */
   getData() {
     this.storage.get('mySource').then((val) => {
       console.log('Your source is', val);
     });
+  }
+
+  clearStorage() {
+    this.storage.clear();
+    window.location.reload();
   }
 
 }
