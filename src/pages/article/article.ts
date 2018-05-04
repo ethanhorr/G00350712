@@ -20,7 +20,7 @@ import { ProfilePage } from '../profile/profile';
 export class ArticlePage {
 
   /**
-   * Generates Random Int & Gets Data on page enter
+   * Generates Random Int & Gets Data on page enter.
    */
   constructor(public navCtrl: NavController, public http: Http, public lolData: LolDataProvider) {
     this.randomInt();
