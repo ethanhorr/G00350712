@@ -25744,6 +25744,10 @@ page-profile .aboutHeader {
   background-color: #ff6666;
 }
 
+page-profile .selectionLabel {
+  font-size: 35px;
+}
+
 page-profile .saveButton {
   margin-left: auto;
   margin-right: auto;

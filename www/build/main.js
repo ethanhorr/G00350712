@@ -426,22 +426,25 @@ var ProfilePage = /** @class */ (function () {
             console.log('Your source is', val);
         });
     };
+    /**
+     * Clears storage
+     */
     ProfilePage.prototype.clearStorage = function () {
         this.storage.clear();
         window.location.reload();
     };
     ProfilePage = ProfilePage_1 = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-profile',template:/*ion-inline-start:"C:\Users\Lurch\Documents\Mobile Application Development\G00350712\src\pages\profile\profile.html"*/'\n<ion-header>\n\n  <ion-navbar color="primary">\n    <button ion-button menuToggle>\n      <ion-icon name="menu"></ion-icon>\n    </button>\n    <ion-title>Profile</ion-title>\n\n    <ion-buttons end>\n      <button ion-button icon-only (click)="openHome()">\n        <ion-icon name="home"></ion-icon>\n      </button>\n    </ion-buttons>\n\n    <ion-buttons end>\n      <button ion-button icon-only (click)="openProfile()">\n        <ion-icon name="person"></ion-icon>\n      </button>\n    </ion-buttons>\n\n\n\n  </ion-navbar>\n</ion-header>\n\n\n<ion-content padding>\n\n  <ion-list radio-group [(ngModel)]="mySource">\n    <ion-list-header class="aboutHeader">\n      News Source\n    </ion-list-header>\n  \n    <ion-item>\n      <ion-label>LadBible</ion-label>\n      <ion-radio value="https://newsapi.org/v2/top-headlines?sources=the-lad-bible&apiKey="></ion-radio>\n    </ion-item>\n\n    <ion-item>\n      <ion-label>SportsBible</ion-label>\n      <ion-radio value="https://newsapi.org/v2/top-headlines?sources=the-sport-bible&apiKey="></ion-radio>\n    </ion-item>\n\n    <ion-item>\n      <ion-label>IGN</ion-label>\n      <ion-radio value="https://newsapi.org/v2/top-headlines?sources=ign&apiKey="></ion-radio>\n    </ion-item>\n\n\n    <button ion-button class="saveButton" (click)="save()">Save Selelction</button><br>\n  <!-- <button ion-button class="saveButton" (click)="clearStorage()">Clear Storage</button> -->\n\n  </ion-list>\n\n</ion-content>\n'/*ion-inline-end:"C:\Users\Lurch\Documents\Mobile Application Development\G00350712\src\pages\profile\profile.html"*/,
+            selector: 'page-profile',template:/*ion-inline-start:"C:\Users\Lurch\Documents\Mobile Application Development\G00350712\src\pages\profile\profile.html"*/'\n<ion-header>\n\n  <ion-navbar color="primary">\n    <button ion-button menuToggle>\n      <ion-icon name="menu"></ion-icon>\n    </button>\n    <ion-title>Profile</ion-title>\n\n    <ion-buttons end>\n      <button ion-button icon-only (click)="openHome()">\n        <ion-icon name="home"></ion-icon>\n      </button>\n    </ion-buttons>\n\n    <ion-buttons end>\n      <button ion-button icon-only (click)="openProfile()">\n        <ion-icon name="person"></ion-icon>\n      </button>\n    </ion-buttons>\n\n\n\n  </ion-navbar>\n</ion-header>\n\n\n<ion-content padding>\n\n  <ion-list radio-group [(ngModel)]="mySource">\n    <ion-list-header class="aboutHeader">\n      News Source\n    </ion-list-header>\n  \n    <ion-item>\n      <ion-label class="selectionLabel">LadBible</ion-label>\n      <ion-radio value="https://newsapi.org/v2/top-headlines?sources=the-lad-bible&apiKey="></ion-radio>\n    </ion-item>\n\n    <ion-item>\n      <ion-label class="selectionLabel">SportsBible</ion-label>\n      <ion-radio value="https://newsapi.org/v2/top-headlines?sources=the-sport-bible&apiKey="></ion-radio>\n    </ion-item>\n\n    <ion-item>\n      <ion-label class="selectionLabel">IGN</ion-label>\n      <ion-radio value="https://newsapi.org/v2/top-headlines?sources=ign&apiKey="></ion-radio>\n    </ion-item>\n\n\n    <button ion-button class="saveButton" (click)="save()">Save Selelction</button><br>\n  <button ion-button class="saveButton" (click)="clearStorage()">Clear Storage</button>\n\n  </ion-list>\n\n</ion-content>\n'/*ion-inline-end:"C:\Users\Lurch\Documents\Mobile Application Development\G00350712\src\pages\profile\profile.html"*/,
         })
         /**
          * Author: Ethan Horrigan
          */
         ,
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */], __WEBPACK_IMPORTED_MODULE_3__ionic_storage__["b" /* Storage */]])
+        __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_3__ionic_storage__["b" /* Storage */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_3__ionic_storage__["b" /* Storage */]) === "function" && _c || Object])
     ], ProfilePage);
     return ProfilePage;
-    var ProfilePage_1;
+    var ProfilePage_1, _a, _b, _c;
 }());
 
 //# sourceMappingURL=profile.js.map
@@ -473,6 +476,9 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 
+/**
+ * Author: Ethan Horrigan
+ */
 var LolDataProvider = /** @class */ (function () {
     function LolDataProvider(http, storage, alertCtrl) {
         var _this = this;
@@ -487,6 +493,9 @@ var LolDataProvider = /** @class */ (function () {
             _this.news = val;
         });
     }
+    /**
+     * Alerts user if no source Selected
+     */
     LolDataProvider.prototype.doAlert = function () {
         var alert = this.alertCtrl.create({
             title: 'No News Source Selected!',
@@ -509,9 +518,10 @@ var LolDataProvider = /** @class */ (function () {
     };
     LolDataProvider = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_1__angular_core__["A" /* Injectable */])(),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_0__angular_http__["a" /* Http */], __WEBPACK_IMPORTED_MODULE_3__ionic_storage__["b" /* Storage */], __WEBPACK_IMPORTED_MODULE_4_ionic_angular__["a" /* AlertController */]])
+        __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_0__angular_http__["a" /* Http */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_0__angular_http__["a" /* Http */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_3__ionic_storage__["b" /* Storage */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_3__ionic_storage__["b" /* Storage */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_4_ionic_angular__["a" /* AlertController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_4_ionic_angular__["a" /* AlertController */]) === "function" && _c || Object])
     ], LolDataProvider);
     return LolDataProvider;
+    var _a, _b, _c;
 }());
 
 //# sourceMappingURL=lol-data.js.map

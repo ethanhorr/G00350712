@@ -60,6 +60,9 @@ export class ProfilePage {
     });
   }
 
+  /**
+   * Clears storage
+   */
   clearStorage() {
     this.storage.clear();
     window.location.reload();

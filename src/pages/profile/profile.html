@@ -33,23 +33,23 @@
     </ion-list-header>
   
     <ion-item>
-      <ion-label>LadBible</ion-label>
+      <ion-label class="selectionLabel">LadBible</ion-label>
       <ion-radio value="https://newsapi.org/v2/top-headlines?sources=the-lad-bible&apiKey="></ion-radio>
     </ion-item>
 
     <ion-item>
-      <ion-label>SportsBible</ion-label>
+      <ion-label class="selectionLabel">SportsBible</ion-label>
       <ion-radio value="https://newsapi.org/v2/top-headlines?sources=the-sport-bible&apiKey="></ion-radio>
     </ion-item>
 
     <ion-item>
-      <ion-label>IGN</ion-label>
+      <ion-label class="selectionLabel">IGN</ion-label>
       <ion-radio value="https://newsapi.org/v2/top-headlines?sources=ign&apiKey="></ion-radio>
     </ion-item>
 
 
     <button ion-button class="saveButton" (click)="save()">Save Selelction</button><br>
-  <!-- <button ion-button class="saveButton" (click)="clearStorage()">Clear Storage</button> -->
+  <button ion-button class="saveButton" (click)="clearStorage()">Clear Storage</button>
 
   </ion-list>
 
