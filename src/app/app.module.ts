@@ -7,36 +7,40 @@ import { HttpModule } from '@angular/http';
 
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
-import { LoginPage } from '../pages/login/login';
-import { AboutPage } from '../pages/about/about';
+
 import { ArticlePage } from '../pages/article/article';
+import { ProfilePage } from '../pages/profile/profile';
+import { AboutPage } from '../pages/about/about';
 import { LolDataProvider } from '../providers/lol-data/lol-data';
 import { Vibration } from '@ionic-native/vibration';
+import { IonicStorageModule } from '@ionic/storage';
 
 @NgModule({
   declarations: [
     MyApp,
     HomePage,
-    LoginPage,
+    ProfilePage,
     AboutPage,
     ArticlePage
   ],
   imports: [
     BrowserModule,
     HttpModule,
-    IonicModule.forRoot(MyApp)
+    IonicModule.forRoot(MyApp),
+    IonicStorageModule.forRoot()
   ],
   bootstrap: [IonicApp],
   entryComponents: [
     MyApp,
     HomePage,
-    LoginPage,
+    ProfilePage,
     AboutPage,
     ArticlePage
   ],
   providers: [
     StatusBar,
     SplashScreen,
+    Storage,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
     Vibration,
     LolDataProvider

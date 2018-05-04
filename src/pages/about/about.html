@@ -6,70 +6,35 @@
 -->
 <ion-header>
 
-  <ion-navbar>
-    <ion-title>about</ion-title>
-  </ion-navbar>
+  <ion-navbar color="primary">
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>About</ion-title>
 
+    <ion-buttons end>
+      <button ion-button icon-only (click)="openHome()">
+        <ion-icon name="home"></ion-icon>
+      </button>
+    </ion-buttons>
+
+    <ion-buttons end>
+      <button ion-button icon-only (click)="openProfile()">
+        <ion-icon name="person"></ion-icon>
+      </button>
+    </ion-buttons>
+
+    <ion-buttons end>
+      <button ion-button icon-only (click)="openAbout()">
+        <ion-icon name="help-circle"></ion-icon>
+      </button>
+    </ion-buttons>
+
+
+  </ion-navbar>
 </ion-header>
 
 
 <ion-content padding>
-  <ion-card>
-    <img src="images/dev-logo.jpg"/>
-    <ion-card-content>
-        <ion-card-title>
-            Syed Rehanuddin
-        </ion-card-title>
-        <p>
-            Mobile & Web Application Developer 
-        </p>            
-    </ion-card-content>
-    <ion-card-content>
-        
-        <ion-row center>
-        
-        <ion-col width-20 class="center" >
-            <a href="http://github.com/srehanuddin">
-            <button>
-                <ion-icon  name="logo-github"></ion-icon>
-            </button> 
-        </a>
-        </ion-col>
-        
-        <ion-col width-20  class="center" >
-        <a href="http://facebook.com/srehanuddin">
-            <button>
-                <ion-icon name="logo-facebook"></ion-icon>
-            </button> 
-        </a>
-        </ion-col>
-        
-        <ion-col width-20  class="center" > 
-        <a href="http://twitter.com/srehanuddin">
-            <button>
-                <ion-icon name="logo-twitter"></ion-icon>
-            </button> 
-        </a>
-        </ion-col>
-        
-        <ion-col width-20  class="center" >
-        <a href="mailto:s.rehanuddin@gmail.com">
-            <button>
-                <ion-icon name="ios-mail"></ion-icon>
-            </button> 
-        </a> 
-        </ion-col>
-        
-        <ion-col width-20  class="center" >
-        <a href="http://rehanuddin.me">
-            <button>
-                <ion-icon name="ios-globe"></ion-icon>
-            </button> 
-        </a>
-        </ion-col>
-        
-        </ion-row>
-                    
-    </ion-card-content>
-</ion-card>
+
 </ion-content>

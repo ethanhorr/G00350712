@@ -1,0 +1,47 @@
+page-profile {
+    .aboutHeader {
+        
+        margin-left: auto;
+        margin-right: auto;
+        display: block;
+        font-size: 30px;
+        text-align: center;
+        color: rgb(255, 255, 255);
+        background-color: #ff6666;
+    }
+
+    .newSourceButtons {
+        margin-left: auto;
+        margin-right: auto;
+        display: block;
+        background-color: white;    
+    }
+
+    .slide-zoom {
+        height: 100%;
+      }
+    
+      .slide-title {
+        margin-top: 10%;
+      }
+      
+      .statsSlide {
+        margin-top: 10%;
+      }
+    
+      b {
+        font-weight: 500;
+      }
+    
+      p {
+        padding: 0 40px;
+        font-size: 14px;
+        line-height: 1.5;
+        color: #60646B;
+    
+        b {
+          color: #000000;
+        }
+      }
+
+}

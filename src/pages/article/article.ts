@@ -4,6 +4,9 @@ import { LolDataProvider } from '../../providers/lol-data/lol-data';
 import { Http } from '@angular/http';
 import 'rxjs/add/operator/map';
 import {Observable} from 'rxjs';
+import { HomePage } from '../home/home';
+import { ProfilePage } from '../profile/profile';
+import { AboutPage } from '../about/about';
 /**
  * Generated class for the ArticlePage page.
  *
@@ -34,6 +37,18 @@ export class ArticlePage {
   randomInt(){
   this.r = Math.floor(Math.random() * 9) + 1
   console.log(this.r);
+  }
+
+  openHome() {
+    this.navCtrl.push(HomePage);
+  }
+
+  openProfile() {
+    this.navCtrl.push(ProfilePage);
+  }
+
+  openAbout() {
+    this.navCtrl.push(AboutPage);
   }
 
   getLolData(){

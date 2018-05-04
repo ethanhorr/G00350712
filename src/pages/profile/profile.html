@@ -1,0 +1,73 @@
+
+<ion-header>
+
+  <ion-navbar color="primary">
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Profile</ion-title>
+
+    <ion-buttons end>
+      <button ion-button icon-only (click)="openHome()">
+        <ion-icon name="home"></ion-icon>
+      </button>
+    </ion-buttons>
+
+    <ion-buttons end>
+      <button ion-button icon-only (click)="openProfile()">
+        <ion-icon name="person"></ion-icon>
+      </button>
+    </ion-buttons>
+
+    <ion-buttons end>
+      <button ion-button icon-only (click)="openAbout()">
+        <ion-icon name="help-circle"></ion-icon>
+      </button>
+    </ion-buttons>
+
+
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content padding>
+
+  <ion-list radio-group>
+    <ion-list-header class="aboutHeader">
+      News Source
+    </ion-list-header>
+  
+    <ion-item>
+      <ion-label>LadBible</ion-label>
+      <ion-radio value="1" (ionSelect)="setSource(source)" [(ngModel)]="source"></ion-radio>
+    </ion-item>
+  
+    <ion-item>
+      <ion-label>SportsBible</ion-label>
+      <ion-radio value="2" (ionSelect)="setSource(source)" [(ngModel)]="source"></ion-radio>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>IGN</ion-label>
+      <ion-radio value="3" (ionSelect)="setSource(source)" [(ngModel)]="source"></ion-radio>
+    </ion-item>
+
+    <button ion-button (click)="setData()">Set Data</button>
+    <button ion-button (click)="getData()">Get Data</button>
+  
+
+  </ion-list>
+
+  <ion-list-header class="aboutHeader">
+    Stats
+  </ion-list-header>
+
+  <ion-slides pager class="statsSlide">
+    <ion-slide>
+      <h2 class="slide-title">Articles Read:</h2>
+    </ion-slide>
+    <ion-slide>
+      <h2 class="slide-title">News Source:</h2>
+    </ion-slide>
+  </ion-slides>
+</ion-content>

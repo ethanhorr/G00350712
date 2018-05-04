@@ -6,31 +6,35 @@
 -->
 
 
-    <ion-header>
-        <ion-navbar color="primary">
-          <button ion-button menuToggle>
-            <ion-icon name="menu"></ion-icon>
-          </button>
-          <ion-title>Article Page</ion-title>
+<ion-header>
 
-          <ion-buttons end>
-              <button ion-button icon-only (click)="openModal()">
-                <ion-icon name="home"></ion-icon>
-              </button>
-            </ion-buttons>
+  <ion-navbar color="primary">
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Article Page</ion-title>
+
+    <ion-buttons end>
+      <button ion-button icon-only (click)="openHome()">
+        <ion-icon name="home"></ion-icon>
+      </button>
+    </ion-buttons>
+
+    <ion-buttons end>
+      <button ion-button icon-only (click)="openProfile()">
+        <ion-icon name="person"></ion-icon>
+      </button>
+    </ion-buttons>
+
+    <ion-buttons end>
+      <button ion-button icon-only (click)="openAbout()">
+        <ion-icon name="help-circle"></ion-icon>
+      </button>
+    </ion-buttons>
 
 
-          <ion-buttons end>
-              <button ion-button icon-only (click)="openModal()">
-                <ion-icon name="help-circle"></ion-icon>
-              </button>
-            </ion-buttons>
-            
-
-        </ion-navbar>
-
-        
-      </ion-header>
+  </ion-navbar>
+</ion-header>
 
 
 

@@ -11,6 +11,9 @@ webpackJsonp([3],{
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_http__ = __webpack_require__(46);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_rxjs_add_operator_map__ = __webpack_require__(79);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_rxjs_add_operator_map___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4_rxjs_add_operator_map__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__home_home__ = __webpack_require__(198);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__profile_profile__ = __webpack_require__(201);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__about_about__ = __webpack_require__(200);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -20,6 +23,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
+
+
+
 
 
 
@@ -48,6 +54,15 @@ var ArticlePage = /** @class */ (function () {
         this.r = Math.floor(Math.random() * 9) + 1;
         console.log(this.r);
     };
+    ArticlePage.prototype.openHome = function () {
+        this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_5__home_home__["a" /* HomePage */]);
+    };
+    ArticlePage.prototype.openProfile = function () {
+        this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_6__profile_profile__["a" /* ProfilePage */]);
+    };
+    ArticlePage.prototype.openAbout = function () {
+        this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_7__about_about__["a" /* AboutPage */]);
+    };
     ArticlePage.prototype.getLolData = function () {
         var _this = this;
         this.lolData.getData().subscribe(function (data) {
@@ -61,11 +76,12 @@ var ArticlePage = /** @class */ (function () {
     };
     ArticlePage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-article',template:/*ion-inline-start:"C:\Users\Lurch\Documents\Mobile Application Development\G00350712\src\pages\article\article.html"*/'<!--\n  Generated template for the ArticlePage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n\n\n    <ion-header>\n        <ion-navbar color="primary">\n          <button ion-button menuToggle>\n            <ion-icon name="menu"></ion-icon>\n          </button>\n          <ion-title>Article Page</ion-title>\n\n          <ion-buttons end>\n              <button ion-button icon-only (click)="openModal()">\n                <ion-icon name="home"></ion-icon>\n              </button>\n            </ion-buttons>\n\n\n          <ion-buttons end>\n              <button ion-button icon-only (click)="openModal()">\n                <ion-icon name="help-circle"></ion-icon>\n              </button>\n            </ion-buttons>\n            \n\n        </ion-navbar>\n\n        \n      </ion-header>\n\n\n\n<ion-content padding>\n\n  \n    <ion-item class="articleItem" *ngFor="let articles of randomArticle">\n\n\n      <p class="title">{{articles.title}}</p><br>\n\n      <p class="authorP">Author: {{articles.author}}</p><br>\n\n      <img src="{{articles.urlToImage}}"><br>\n      <a href="{{articles.url}}">\n          <button ion-button large>Read article</button>\n      </a>\n    </ion-item>\n\n</ion-content>\n'/*ion-inline-end:"C:\Users\Lurch\Documents\Mobile Application Development\G00350712\src\pages\article\article.html"*/,
+            selector: 'page-article',template:/*ion-inline-start:"C:\Users\Lurch\Documents\Mobile Application Development\G00350712\src\pages\article\article.html"*/'<!--\n  Generated template for the ArticlePage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n\n\n<ion-header>\n\n  <ion-navbar color="primary">\n    <button ion-button menuToggle>\n      <ion-icon name="menu"></ion-icon>\n    </button>\n    <ion-title>Article Page</ion-title>\n\n    <ion-buttons end>\n      <button ion-button icon-only (click)="openHome()">\n        <ion-icon name="home"></ion-icon>\n      </button>\n    </ion-buttons>\n\n    <ion-buttons end>\n      <button ion-button icon-only (click)="openProfile()">\n        <ion-icon name="person"></ion-icon>\n      </button>\n    </ion-buttons>\n\n    <ion-buttons end>\n      <button ion-button icon-only (click)="openAbout()">\n        <ion-icon name="help-circle"></ion-icon>\n      </button>\n    </ion-buttons>\n\n\n  </ion-navbar>\n</ion-header>\n\n\n\n<ion-content padding>\n\n  \n    <ion-item class="articleItem" *ngFor="let articles of randomArticle">\n\n\n      <p class="title">{{articles.title}}</p><br>\n\n      <p class="authorP">Author: {{articles.author}}</p><br>\n\n      <img src="{{articles.urlToImage}}"><br>\n      <a href="{{articles.url}}">\n          <button ion-button large>Read article</button>\n      </a>\n    </ion-item>\n\n</ion-content>\n'/*ion-inline-end:"C:\Users\Lurch\Documents\Mobile Application Development\G00350712\src\pages\article\article.html"*/,
         }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* NavController */], __WEBPACK_IMPORTED_MODULE_3__angular_http__["a" /* Http */], __WEBPACK_IMPORTED_MODULE_2__providers_lol_data_lol_data__["a" /* LolDataProvider */]])
+        __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* NavController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* NavController */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_3__angular_http__["a" /* Http */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_3__angular_http__["a" /* Http */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_2__providers_lol_data_lol_data__["a" /* LolDataProvider */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__providers_lol_data_lol_data__["a" /* LolDataProvider */]) === "function" && _c || Object])
     ], ArticlePage);
     return ArticlePage;
+    var _a, _b, _c;
 }());
 
 //# sourceMappingURL=article.js.map
@@ -94,15 +110,15 @@ webpackEmptyAsyncContext.id = 113;
 
 var map = {
 	"../pages/about/about.module": [
-		278,
+		276,
 		2
 	],
 	"../pages/article/article.module": [
 		277,
 		1
 	],
-	"../pages/login/login.module": [
-		276,
+	"../pages/profile/profile.module": [
+		278,
 		0
 	]
 };
@@ -133,8 +149,10 @@ module.exports = webpackAsyncContext;
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_rxjs_add_operator_map__ = __webpack_require__(79);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_rxjs_add_operator_map___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_rxjs_add_operator_map__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__providers_lol_data_lol_data__ = __webpack_require__(78);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__article_article__ = __webpack_require__(103);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__ionic_native_vibration__ = __webpack_require__(199);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__ionic_native_vibration__ = __webpack_require__(199);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__article_article__ = __webpack_require__(103);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__profile_profile__ = __webpack_require__(201);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__about_about__ = __webpack_require__(200);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -144,6 +162,8 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
+
+
 
 
 
@@ -158,18 +178,28 @@ var HomePage = /** @class */ (function () {
         this.lolData = lolData;
         this.vibration = vibration;
     }
+    HomePage_1 = HomePage;
     HomePage.prototype.openArticlePage = function () {
         this.vibration.vibrate(1000); //Vibrates when Random Button is pressed
-        this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_5__article_article__["a" /* ArticlePage */]);
+        this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_6__article_article__["a" /* ArticlePage */]);
     };
-    HomePage = __decorate([
+    HomePage.prototype.openHome = function () {
+        this.navCtrl.push(HomePage_1);
+    };
+    HomePage.prototype.openProfile = function () {
+        this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_7__profile_profile__["a" /* ProfilePage */]);
+    };
+    HomePage.prototype.openAbout = function () {
+        this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_8__about_about__["a" /* AboutPage */]);
+    };
+    HomePage = HomePage_1 = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-home',template:/*ion-inline-start:"C:\Users\Lurch\Documents\Mobile Application Development\G00350712\src\pages\home\home.html"*/'\n    <ion-header>\n\n        <ion-navbar color="primary">\n          <button ion-button menuToggle>\n            <ion-icon name="menu"></ion-icon>\n          </button>\n          <ion-title>Article Page</ion-title>\n\n          <ion-buttons end>\n              <button ion-button icon-only (click)="openModal()">\n                <ion-icon name="home"></ion-icon>\n              </button>\n            </ion-buttons>\n\n          <ion-buttons end>\n              <button ion-button icon-only (click)="openModal()">\n                <ion-icon name="help-circle"></ion-icon>\n              </button>\n            </ion-buttons>\n\n            <ion-buttons end>\n                <button ion-button icon-only (click)="openModal()">\n                  <ion-icon name="person"></ion-icon>\n                </button>\n              </ion-buttons>\n            \n        </ion-navbar>        \n      </ion-header>\n\n<ion-content padding>\n\n      <button ion-button round class="randomButton" (click)="openArticlePage()">Random Article</button>\n      \n</ion-content>\n'/*ion-inline-end:"C:\Users\Lurch\Documents\Mobile Application Development\G00350712\src\pages\home\home.html"*/
+            selector: 'page-home',template:/*ion-inline-start:"C:\Users\Lurch\Documents\Mobile Application Development\G00350712\src\pages\home\home.html"*/'<ion-header>\n\n  <ion-navbar color="primary">\n    <button ion-button menuToggle>\n      <ion-icon name="menu"></ion-icon>\n    </button>\n    <ion-title>Home</ion-title>\n\n    <ion-buttons end>\n      <button ion-button icon-only (click)="openHome()">\n        <ion-icon name="home"></ion-icon>\n      </button>\n    </ion-buttons>\n\n    <ion-buttons end>\n      <button ion-button icon-only (click)="openProfile()">\n        <ion-icon name="person"></ion-icon>\n      </button>\n    </ion-buttons>\n\n    <ion-buttons end>\n      <button ion-button icon-only (click)="openAbout()">\n        <ion-icon name="help-circle"></ion-icon>\n      </button>\n    </ion-buttons>\n\n\n  </ion-navbar>\n</ion-header>\n\n<ion-content padding>\n\n  <button ion-button round class="randomButton" (click)="openArticlePage()">Random Article</button>\n\n\n\n</ion-content>'/*ion-inline-end:"C:\Users\Lurch\Documents\Mobile Application Development\G00350712\src\pages\home\home.html"*/
         }),
-        __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* NavController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* NavController */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_2__angular_http__["a" /* Http */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__angular_http__["a" /* Http */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_4__providers_lol_data_lol_data__["a" /* LolDataProvider */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_4__providers_lol_data_lol_data__["a" /* LolDataProvider */]) === "function" && _c || Object, typeof (_d = typeof __WEBPACK_IMPORTED_MODULE_6__ionic_native_vibration__["a" /* Vibration */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_6__ionic_native_vibration__["a" /* Vibration */]) === "function" && _d || Object])
+        __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* NavController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* NavController */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_2__angular_http__["a" /* Http */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__angular_http__["a" /* Http */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_4__providers_lol_data_lol_data__["a" /* LolDataProvider */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_4__providers_lol_data_lol_data__["a" /* LolDataProvider */]) === "function" && _c || Object, typeof (_d = typeof __WEBPACK_IMPORTED_MODULE_5__ionic_native_vibration__["a" /* Vibration */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_5__ionic_native_vibration__["a" /* Vibration */]) === "function" && _d || Object])
     ], HomePage);
     return HomePage;
-    var _a, _b, _c, _d;
+    var HomePage_1, _a, _b, _c, _d;
 }());
 
 //# sourceMappingURL=home.js.map
@@ -180,44 +210,11 @@ var HomePage = /** @class */ (function () {
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return LoginPage; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(29);
-var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-var __metadata = (this && this.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
-
-
-var LoginPage = /** @class */ (function () {
-    function LoginPage(nav) {
-        this.nav = nav;
-    }
-    LoginPage = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-login',template:/*ion-inline-start:"C:\Users\Lurch\Documents\Mobile Application Development\G00350712\src\pages\login\login.html"*/'<!--\n  Generated template for the LoginPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n\n\n\n<ion-content padding>\n  <ion-slides pager>\n    <ion-slide>\n      <img src="assets/login-slide/nightout.jpg" class="slide-image" />\n      <h2 class="slide-title">Fortnite Stats</h2>\n    </ion-slide>\n    <ion-slide>\n      <img src="assets/login-slide/downtown-galway.jpg" class="slide-image" />\n      <h2 class="slide-title">Compare Stats</h2>\n      <button ion-button large clear icon-end color="primary">\n        Continue\n        <ion-icon name="arrow-forward"></ion-icon>\n      </button>\n    </ion-slide>\n  </ion-slides>\n\n\n  <ion-list no-line>\n    <button ion-button round>Connect</button>\n    <button ion-button round name="sign-up">\n        <ion-icon name="ios-mail-outline" class="sign-up-button"></ion-icon> Sign Up\n      </button>\n  </ion-list>\n\n  <ion-list no-line>\n      <button ion-button round outline>Log In</button>\n  </ion-list>\n\n</ion-content>'/*ion-inline-end:"C:\Users\Lurch\Documents\Mobile Application Development\G00350712\src\pages\login\login.html"*/,
-        }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* NavController */]])
-    ], LoginPage);
-    return LoginPage;
-}());
-
-//# sourceMappingURL=login.js.map
-
-/***/ }),
-
-/***/ 201:
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AboutPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(29);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__home_home__ = __webpack_require__(198);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__profile_profile__ = __webpack_require__(201);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -227,6 +224,8 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
+
+
 
 
 /**
@@ -240,19 +239,114 @@ var AboutPage = /** @class */ (function () {
         this.navCtrl = navCtrl;
         this.navParams = navParams;
     }
+    AboutPage_1 = AboutPage;
     AboutPage.prototype.ionViewDidLoad = function () {
         console.log('ionViewDidLoad AboutPage');
     };
-    AboutPage = __decorate([
+    AboutPage.prototype.openHome = function () {
+        this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_2__home_home__["a" /* HomePage */]);
+    };
+    AboutPage.prototype.openProfile = function () {
+        this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_3__profile_profile__["a" /* ProfilePage */]);
+    };
+    AboutPage.prototype.openAbout = function () {
+        this.navCtrl.push(AboutPage_1);
+    };
+    AboutPage = AboutPage_1 = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-about',template:/*ion-inline-start:"C:\Users\Lurch\Documents\Mobile Application Development\G00350712\src\pages\about\about.html"*/'<!--\n  Generated template for the AboutPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n\n  <ion-navbar>\n    <ion-title>about</ion-title>\n  </ion-navbar>\n\n</ion-header>\n\n\n<ion-content padding>\n  <ion-card>\n    <img src="images/dev-logo.jpg"/>\n    <ion-card-content>\n        <ion-card-title>\n            Syed Rehanuddin\n        </ion-card-title>\n        <p>\n            Mobile & Web Application Developer \n        </p>            \n    </ion-card-content>\n    <ion-card-content>\n        \n        <ion-row center>\n        \n        <ion-col width-20 class="center" >\n            <a href="http://github.com/srehanuddin">\n            <button>\n                <ion-icon  name="logo-github"></ion-icon>\n            </button> \n        </a>\n        </ion-col>\n        \n        <ion-col width-20  class="center" >\n        <a href="http://facebook.com/srehanuddin">\n            <button>\n                <ion-icon name="logo-facebook"></ion-icon>\n            </button> \n        </a>\n        </ion-col>\n        \n        <ion-col width-20  class="center" > \n        <a href="http://twitter.com/srehanuddin">\n            <button>\n                <ion-icon name="logo-twitter"></ion-icon>\n            </button> \n        </a>\n        </ion-col>\n        \n        <ion-col width-20  class="center" >\n        <a href="mailto:s.rehanuddin@gmail.com">\n            <button>\n                <ion-icon name="ios-mail"></ion-icon>\n            </button> \n        </a> \n        </ion-col>\n        \n        <ion-col width-20  class="center" >\n        <a href="http://rehanuddin.me">\n            <button>\n                <ion-icon name="ios-globe"></ion-icon>\n            </button> \n        </a>\n        </ion-col>\n        \n        </ion-row>\n                    \n    </ion-card-content>\n</ion-card>\n</ion-content>\n'/*ion-inline-end:"C:\Users\Lurch\Documents\Mobile Application Development\G00350712\src\pages\about\about.html"*/,
+            selector: 'page-about',template:/*ion-inline-start:"C:\Users\Lurch\Documents\Mobile Application Development\G00350712\src\pages\about\about.html"*/'<!--\n  Generated template for the AboutPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n\n  <ion-navbar color="primary">\n    <button ion-button menuToggle>\n      <ion-icon name="menu"></ion-icon>\n    </button>\n    <ion-title>About</ion-title>\n\n    <ion-buttons end>\n      <button ion-button icon-only (click)="openHome()">\n        <ion-icon name="home"></ion-icon>\n      </button>\n    </ion-buttons>\n\n    <ion-buttons end>\n      <button ion-button icon-only (click)="openProfile()">\n        <ion-icon name="person"></ion-icon>\n      </button>\n    </ion-buttons>\n\n    <ion-buttons end>\n      <button ion-button icon-only (click)="openAbout()">\n        <ion-icon name="help-circle"></ion-icon>\n      </button>\n    </ion-buttons>\n\n\n  </ion-navbar>\n</ion-header>\n\n\n<ion-content padding>\n\n</ion-content>\n'/*ion-inline-end:"C:\Users\Lurch\Documents\Mobile Application Development\G00350712\src\pages\about\about.html"*/,
         }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavParams */]])
+        __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* NavController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* NavController */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavParams */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavParams */]) === "function" && _b || Object])
     ], AboutPage);
     return AboutPage;
+    var AboutPage_1, _a, _b;
 }());
 
 //# sourceMappingURL=about.js.map
+
+/***/ }),
+
+/***/ 201:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ProfilePage; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(29);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__home_home__ = __webpack_require__(198);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__about_about__ = __webpack_require__(200);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__ionic_storage__ = __webpack_require__(279);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+
+
+/**
+ * Generated class for the ProfilePage page.
+ *
+ * See https://ionicframework.com/docs/components/#navigation for more info on
+ * Ionic pages and navigation.
+ */
+var ProfilePage = /** @class */ (function () {
+    function ProfilePage(navCtrl, navParams, storage) {
+        this.navCtrl = navCtrl;
+        this.navParams = navParams;
+        this.storage = storage;
+    }
+    ProfilePage_1 = ProfilePage;
+    ProfilePage.prototype.ionViewDidLoad = function () {
+        console.log('ionViewDidLoad ProfilePage');
+    };
+    ProfilePage.prototype.openHome = function () {
+        this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_2__home_home__["a" /* HomePage */]);
+    };
+    ProfilePage.prototype.openProfile = function () {
+        this.navCtrl.push(ProfilePage_1);
+    };
+    ProfilePage.prototype.openAbout = function () {
+        this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_3__about_about__["a" /* AboutPage */]);
+    };
+    ProfilePage.prototype.setSource = function (source) {
+        switch (source) {
+            case 1:
+                this.storage.set('newsSource', 'LadsBible');
+                break;
+            case 2:
+                this.storage.set('newsSource', 'SportsBible');
+                break;
+            case 3:
+                this.storage.set('newsSource', 'IGN');
+                break;
+        }
+        console.log("Set");
+    };
+    ProfilePage.prototype.getData = function () {
+        this.storage.get('newsSource').then(function (val) {
+            console.log('Your source is', val);
+        });
+    };
+    ProfilePage.prototype.saveData = function () {
+    };
+    ProfilePage = ProfilePage_1 = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
+            selector: 'page-profile',template:/*ion-inline-start:"C:\Users\Lurch\Documents\Mobile Application Development\G00350712\src\pages\profile\profile.html"*/'\n<ion-header>\n\n  <ion-navbar color="primary">\n    <button ion-button menuToggle>\n      <ion-icon name="menu"></ion-icon>\n    </button>\n    <ion-title>Profile</ion-title>\n\n    <ion-buttons end>\n      <button ion-button icon-only (click)="openHome()">\n        <ion-icon name="home"></ion-icon>\n      </button>\n    </ion-buttons>\n\n    <ion-buttons end>\n      <button ion-button icon-only (click)="openProfile()">\n        <ion-icon name="person"></ion-icon>\n      </button>\n    </ion-buttons>\n\n    <ion-buttons end>\n      <button ion-button icon-only (click)="openAbout()">\n        <ion-icon name="help-circle"></ion-icon>\n      </button>\n    </ion-buttons>\n\n\n  </ion-navbar>\n</ion-header>\n\n\n<ion-content padding>\n\n  <ion-list radio-group>\n    <ion-list-header class="aboutHeader">\n      News Source\n    </ion-list-header>\n  \n    <ion-item>\n      <ion-label>LadBible</ion-label>\n      <ion-radio value="1" (ionSelect)="setSource(source)" [(ngModel)]="source"></ion-radio>\n    </ion-item>\n  \n    <ion-item>\n      <ion-label>SportsBible</ion-label>\n      <ion-radio value="2" (ionSelect)="setSource(source)" [(ngModel)]="source"></ion-radio>\n    </ion-item>\n\n    <ion-item>\n      <ion-label>IGN</ion-label>\n      <ion-radio value="3" (ionSelect)="setSource(source)" [(ngModel)]="source"></ion-radio>\n    </ion-item>\n\n    <button ion-button (click)="setData()">Set Data</button>\n    <button ion-button (click)="getData()">Get Data</button>\n  \n\n  </ion-list>\n\n  <ion-list-header class="aboutHeader">\n    Stats\n  </ion-list-header>\n\n  <ion-slides pager class="statsSlide">\n    <ion-slide>\n      <h2 class="slide-title">Articles Read:</h2>\n    </ion-slide>\n    <ion-slide>\n      <h2 class="slide-title">News Source:</h2>\n    </ion-slide>\n  </ion-slides>\n</ion-content>\n'/*ion-inline-end:"C:\Users\Lurch\Documents\Mobile Application Development\G00350712\src\pages\profile\profile.html"*/,
+        }),
+        __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* NavController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* NavController */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavParams */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavParams */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_4__ionic_storage__["b" /* Storage */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_4__ionic_storage__["b" /* Storage */]) === "function" && _c || Object])
+    ], ProfilePage);
+    return ProfilePage;
+    var ProfilePage_1, _a, _b, _c;
+}());
+
+//# sourceMappingURL=profile.js.map
 
 /***/ }),
 
@@ -283,17 +377,19 @@ Object(__WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__["a" /* pl
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__angular_http__ = __webpack_require__(46);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__app_component__ = __webpack_require__(275);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__pages_home_home__ = __webpack_require__(198);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__pages_login_login__ = __webpack_require__(200);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__pages_about_about__ = __webpack_require__(201);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__pages_article_article__ = __webpack_require__(103);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__pages_article_article__ = __webpack_require__(103);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__pages_profile_profile__ = __webpack_require__(201);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__pages_about_about__ = __webpack_require__(200);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__providers_lol_data_lol_data__ = __webpack_require__(78);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__ionic_native_vibration__ = __webpack_require__(199);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__ionic_storage__ = __webpack_require__(279);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+
 
 
 
@@ -315,32 +411,34 @@ var AppModule = /** @class */ (function () {
             declarations: [
                 __WEBPACK_IMPORTED_MODULE_6__app_component__["a" /* MyApp */],
                 __WEBPACK_IMPORTED_MODULE_7__pages_home_home__["a" /* HomePage */],
-                __WEBPACK_IMPORTED_MODULE_8__pages_login_login__["a" /* LoginPage */],
-                __WEBPACK_IMPORTED_MODULE_9__pages_about_about__["a" /* AboutPage */],
-                __WEBPACK_IMPORTED_MODULE_10__pages_article_article__["a" /* ArticlePage */]
+                __WEBPACK_IMPORTED_MODULE_9__pages_profile_profile__["a" /* ProfilePage */],
+                __WEBPACK_IMPORTED_MODULE_10__pages_about_about__["a" /* AboutPage */],
+                __WEBPACK_IMPORTED_MODULE_8__pages_article_article__["a" /* ArticlePage */]
             ],
             imports: [
                 __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser__["a" /* BrowserModule */],
                 __WEBPACK_IMPORTED_MODULE_5__angular_http__["b" /* HttpModule */],
                 __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["c" /* IonicModule */].forRoot(__WEBPACK_IMPORTED_MODULE_6__app_component__["a" /* MyApp */], {}, {
                     links: [
-                        { loadChildren: '../pages/login/login.module#LoginPageModule', name: 'LoginPage', segment: 'login', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/about/about.module#AboutPageModule', name: 'AboutPage', segment: 'about', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/article/article.module#ArticlePageModule', name: 'ArticlePage', segment: 'article', priority: 'low', defaultHistory: [] },
-                        { loadChildren: '../pages/about/about.module#AboutPageModule', name: 'AboutPage', segment: 'about', priority: 'low', defaultHistory: [] }
+                        { loadChildren: '../pages/profile/profile.module#ProfilePageModule', name: 'ProfilePage', segment: 'profile', priority: 'low', defaultHistory: [] }
                     ]
-                })
+                }),
+                __WEBPACK_IMPORTED_MODULE_13__ionic_storage__["a" /* IonicStorageModule */].forRoot()
             ],
             bootstrap: [__WEBPACK_IMPORTED_MODULE_2_ionic_angular__["a" /* IonicApp */]],
             entryComponents: [
                 __WEBPACK_IMPORTED_MODULE_6__app_component__["a" /* MyApp */],
                 __WEBPACK_IMPORTED_MODULE_7__pages_home_home__["a" /* HomePage */],
-                __WEBPACK_IMPORTED_MODULE_8__pages_login_login__["a" /* LoginPage */],
-                __WEBPACK_IMPORTED_MODULE_9__pages_about_about__["a" /* AboutPage */],
-                __WEBPACK_IMPORTED_MODULE_10__pages_article_article__["a" /* ArticlePage */]
+                __WEBPACK_IMPORTED_MODULE_9__pages_profile_profile__["a" /* ProfilePage */],
+                __WEBPACK_IMPORTED_MODULE_10__pages_about_about__["a" /* AboutPage */],
+                __WEBPACK_IMPORTED_MODULE_8__pages_article_article__["a" /* ArticlePage */]
             ],
             providers: [
                 __WEBPACK_IMPORTED_MODULE_4__ionic_native_status_bar__["a" /* StatusBar */],
                 __WEBPACK_IMPORTED_MODULE_3__ionic_native_splash_screen__["a" /* SplashScreen */],
+                Storage,
                 { provide: __WEBPACK_IMPORTED_MODULE_1__angular_core__["u" /* ErrorHandler */], useClass: __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["b" /* IonicErrorHandler */] },
                 __WEBPACK_IMPORTED_MODULE_12__ionic_native_vibration__["a" /* Vibration */],
                 __WEBPACK_IMPORTED_MODULE_11__providers_lol_data_lol_data__["a" /* LolDataProvider */]
