@@ -6,13 +6,6 @@ import 'rxjs/add/operator/map';
 import {Observable} from 'rxjs';
 import { HomePage } from '../home/home';
 import { ProfilePage } from '../profile/profile';
-import { AboutPage } from '../about/about';
-/**
- * Generated class for the ArticlePage page.
- *
- * See https://ionicframework.com/docs/components/#navigation for more info on
- * Ionic pages and navigation.
- */
 
 @IonicPage()
 @Component({
@@ -45,10 +38,6 @@ export class ArticlePage {
 
   openProfile() {
     this.navCtrl.push(ProfilePage);
-  }
-
-  openAbout() {
-    this.navCtrl.push(AboutPage);
   }
 
   getLolData(){

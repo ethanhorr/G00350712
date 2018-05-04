@@ -1,15 +1,7 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { HomePage } from '../home/home';
-import { AboutPage } from '../about/about';
 import { Storage } from '@ionic/storage';
-
-/**
- * Generated class for the ProfilePage page.
- *
- * See https://ionicframework.com/docs/components/#navigation for more info on
- * Ionic pages and navigation.
- */
 
 @IonicPage()
 @Component({
@@ -18,11 +10,14 @@ import { Storage } from '@ionic/storage';
 })
 export class ProfilePage {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams, private storage: Storage) {
+  public mySource: string;
+
+  constructor(public navCtrl: NavController, public navParams: NavParams, public storage: Storage) {
   }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad ProfilePage');
+    console.log(this.mySource);
   }
 
   openHome() {
@@ -33,32 +28,16 @@ export class ProfilePage {
     this.navCtrl.push(ProfilePage);
   }
 
-  openAbout() {
-    this.navCtrl.push(AboutPage);
-  }
-
-  setSource(source) {
-    switch (source) {
-      case 1:
-      this.storage.set('newsSource', 'LadsBible');
-      break;
-      case 2:
-      this.storage.set('newsSource', 'SportsBible');
-      break;
-      case 3:
-      this.storage.set('newsSource', 'IGN');
-      break;
-    }
-    console.log("Set");
+  save() {
+    this.storage.set("mySource", this.mySource);
+      window.location.reload();
+    console.log(this.mySource);
   }
 
   getData() {
-    this.storage.get('newsSource').then((val) => {
+    this.storage.get('mySource').then((val) => {
       console.log('Your source is', val);
     });
   }
 
-  saveData() {
-
-  }
 }

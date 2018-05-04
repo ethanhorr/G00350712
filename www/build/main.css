@@ -25708,6 +25708,8 @@ page-article .articleItem button {
 }
 
 page-article img {
+  max-width: 800px;
+  max-width: 600px;
   margin-left: auto;
   margin-right: auto;
   display: block;
@@ -25728,6 +25730,10 @@ page-home .randomButton {
   font-size: 25px;
 }
 
+page-home .slide-title {
+  margin-top: 5%;
+}
+
 page-profile .aboutHeader {
   margin-left: auto;
   margin-right: auto;
@@ -25736,6 +25742,13 @@ page-profile .aboutHeader {
   text-align: center;
   color: white;
   background-color: #ff6666;
+}
+
+page-profile .saveButton {
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+  font-size: 25px;
 }
 
 page-profile .newSourceButtons {

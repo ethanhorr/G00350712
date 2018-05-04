@@ -10,7 +10,6 @@ import { HomePage } from '../pages/home/home';
 
 import { ArticlePage } from '../pages/article/article';
 import { ProfilePage } from '../pages/profile/profile';
-import { AboutPage } from '../pages/about/about';
 import { LolDataProvider } from '../providers/lol-data/lol-data';
 import { Vibration } from '@ionic-native/vibration';
 import { IonicStorageModule } from '@ionic/storage';
@@ -20,7 +19,6 @@ import { IonicStorageModule } from '@ionic/storage';
     MyApp,
     HomePage,
     ProfilePage,
-    AboutPage,
     ArticlePage
   ],
   imports: [
@@ -34,7 +32,6 @@ import { IonicStorageModule } from '@ionic/storage';
     MyApp,
     HomePage,
     ProfilePage,
-    AboutPage,
     ArticlePage
   ],
   providers: [

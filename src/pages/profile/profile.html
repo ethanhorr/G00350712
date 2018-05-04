@@ -19,11 +19,6 @@
       </button>
     </ion-buttons>
 
-    <ion-buttons end>
-      <button ion-button icon-only (click)="openAbout()">
-        <ion-icon name="help-circle"></ion-icon>
-      </button>
-    </ion-buttons>
 
 
   </ion-navbar>
@@ -32,29 +27,28 @@
 
 <ion-content padding>
 
-  <ion-list radio-group>
+  <ion-list radio-group [(ngModel)]="mySource">
     <ion-list-header class="aboutHeader">
       News Source
     </ion-list-header>
   
     <ion-item>
       <ion-label>LadBible</ion-label>
-      <ion-radio value="1" (ionSelect)="setSource(source)" [(ngModel)]="source"></ion-radio>
+      <ion-radio value="https://newsapi.org/v2/top-headlines?sources=the-lad-bible&apiKey="></ion-radio>
     </ion-item>
-  
+
     <ion-item>
       <ion-label>SportsBible</ion-label>
-      <ion-radio value="2" (ionSelect)="setSource(source)" [(ngModel)]="source"></ion-radio>
+      <ion-radio value="https://newsapi.org/v2/top-headlines?sources=the-sport-bible&apiKey="></ion-radio>
     </ion-item>
 
     <ion-item>
       <ion-label>IGN</ion-label>
-      <ion-radio value="3" (ionSelect)="setSource(source)" [(ngModel)]="source"></ion-radio>
+      <ion-radio value="https://newsapi.org/v2/top-headlines?sources=ign&apiKey="></ion-radio>
     </ion-item>
 
-    <button ion-button (click)="setData()">Set Data</button>
-    <button ion-button (click)="getData()">Get Data</button>
-  
+
+    <button ion-button class="saveButton" (click)="save()">Save Selelction</button>
 
   </ion-list>
 
@@ -64,7 +58,8 @@
 
   <ion-slides pager class="statsSlide">
     <ion-slide>
-      <h2 class="slide-title">Articles Read:</h2>
+      <h2 class="slide-title">Articles Read:</h2><br>
+      <h2 class="slide-title">0</h2>
     </ion-slide>
     <ion-slide>
       <h2 class="slide-title">News Source:</h2>
